@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import { searchResult } from "./Search"
+import { SearchResult } from "./Search"
 
-const SearchResults = (searchResult: searchResult) => (
+const SearchResults = (searchResult: SearchResult) => (
     <div>
         {searchResult.data.map(item => {
             return (

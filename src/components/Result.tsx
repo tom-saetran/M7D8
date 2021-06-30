@@ -22,9 +22,9 @@ interface Results {
     album: Album
 }
 
-type props = id & RouteComponentProps
+type Props = id & RouteComponentProps
 
-const Result = (props: props) => {
+const Result = (props: Props) => {
     const [data, setData] = useState<Results | undefined>(undefined)
 
     useEffect(() => {

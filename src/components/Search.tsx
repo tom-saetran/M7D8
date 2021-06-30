@@ -48,13 +48,13 @@ interface Track {
     album: Album
 }
 
-export interface searchResult {
+export interface SearchResult {
     data: Track[]
 }
 
 const Search = (props: RouteComponentProps) => {
     const [searchValue, setSearchValue] = React.useState<string>("")
-    const [searchResult, setSearchResult] = React.useState<searchResult | undefined>(undefined)
+    const [searchResult, setSearchResult] = React.useState<SearchResult | undefined>(undefined)
 
     const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
