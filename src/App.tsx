@@ -8,11 +8,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <div className="App">
-                        <header className="App-header">
-                            <Route exact path="/" render={routeProps => <Search {...routeProps} />} />
-                        </header>
-                    </div>
+                    <Route exact path="/" render={routeProps => <Search {...routeProps} />} />
                 </Switch>
             </Router>
         )
