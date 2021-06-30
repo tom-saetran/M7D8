@@ -29,9 +29,15 @@ const Result = (props: props) => {
 
     useEffect(() => {
         const getData = async () => {
-            const result = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + props.id)
-            const data = await result.json()
-            setData(data)
+            try {
+                const result = await fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + props.id)
+                if (result.ok) {
+                    const data = await result.json()
+                    setData(data)
+                } else throw new Error("Failed to fetch")
+            } catch (error) {
+                console.error(error)
+            }
         }
         getData()
     }, [props.id])
